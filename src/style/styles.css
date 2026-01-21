@@ -10,3 +10,14 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+:root {
+    --color-neutral-0: #ffffff;
+    --color-neutral-1: #fffbf4;
+    --color-neutral-2: #e9c275;
+    --color-neutral-3: #4f3104;
+    --color-neutral-4: #000000;
+
+    --color-primary-1: #226924;
+    --color-primary-2: #d82500;
+}
