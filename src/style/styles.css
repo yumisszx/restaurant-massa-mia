@@ -12,9 +12,8 @@
 }
 
 #container {
-    background-image: url('../assets/background-sm.png');
+    background-color: var(--color-neutral-0);
     background-size: contain;
-    height: 4600px;
 }
 
 :root {
@@ -104,7 +103,7 @@ header {
     gap: 12px;
     align-items: center;
     min-height: calc(100vh - 96px);
-    padding-top: clamp(0px, 5vh, 32px);
+    padding-top: clamp(46px, 9vh, 73px);
 
     .inicio-img {
         width: clamp(200px, 50%, 400px);
@@ -113,7 +112,7 @@ header {
     .inicio-title {
         color: var(--color-neutral-3);
         text-align: center;
-        font-size: clamp(3rem, 4vw, 4.3rem);
+        font-size: clamp(3rem, 3vw, 4.3rem);
         font-weight: normal;
         line-height: 1.2;
         max-width: 420px;
@@ -129,6 +128,7 @@ header {
 }
 
 #sobreNos {
+    background-color: var(--color-primary-1);
     padding: 60px 20px;
     text-align: center;
     align-items: center;
@@ -153,9 +153,8 @@ header {
 
 @media (min-width: 768px) {
     #container {
-        background-image: url('../assets/background-pc.png');
+        background-color: var(--color-neutral-0);
         background-size: contain;
-        height: 6300px;
     }
 
     header {
@@ -177,7 +176,7 @@ header {
 
     #inicio {
         flex-direction: row;
-        gap: clamp(40px, 20vh, 250px);
+        gap: clamp(40px, 9vh, 250px);
         justify-content: center;
         
 
