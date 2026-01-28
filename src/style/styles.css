@@ -254,29 +254,29 @@ header {
         margin-top: 4rem;
         padding: 2rem;
 
-        .fa-user{
-            font-size: clamp(5rem, 8vw, 6rem); 
-        }
+            .fa-user{
+                font-size: clamp(5rem, 8vw, 6rem); 
+            }
 
-        #user1{
-            color: var(--color-primary-1);
-        }
+            #user1{
+                color: var(--color-primary-1);
+            }
 
-        #user2{
-            color: var(--color-neutral-0);
-        }
+            #user2{
+                color: var(--color-neutral-0);
+            }
 
-        #user3{
-            color: var(--color-primary-2);
-        }
+            #user3{
+                color: var(--color-primary-2);
+            }
 
-        p {
-            font-size: clamp(1rem, 5vw, 1.5rem);
-            color: var(--color-neutral-3);
-            margin-top: 1rem;
-            line-height: 1.6;
+            p {
+                font-size: clamp(1rem, 5vw, 1.5rem);
+                color: var(--color-neutral-3);
+                margin-top: 1rem;
+                line-height: 1.6;
+            }
         }
-    }
     }
 }
 
