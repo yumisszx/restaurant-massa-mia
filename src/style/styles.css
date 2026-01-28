@@ -155,6 +155,10 @@ header {
     padding: 2rem 1rem;
     background-color: var(--color-neutral-1);
     text-align: center;
+    
+    .title{
+        color: var(--color-primary-2);
+    }
 
     .produtos-container {
         display: flex;
