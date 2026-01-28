@@ -27,6 +27,23 @@
     --color-primary-2: #d82500;
 }
 
+::-webkit-scrollbar {
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-neutral-0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-2);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral-3);
+}
+
 .btn {
     padding: 10px 20px;
     border: none;
