@@ -151,6 +151,55 @@ header {
     }
 }
 
+#produtos {
+    padding: 2rem 1rem;
+    background-color: var(--color-neutral-1);
+    text-align: center;
+
+    .produtos-container {
+        display: flex;
+        flex-direction: column;
+
+        .tipo-produto {
+            padding: 3rem 1rem;
+
+            h3 {
+                font-size: clamp(2rem, 4vw, 2.2rem);
+                color: var(--color-neutral-2);
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+
+            p {
+                font-size: clamp(1rem, 5vw, 1.5rem);
+                color: var(--color-neutral-0);
+                max-width: 600px;
+                margin: 0 auto 30px auto;
+                line-height: 1.6;
+            }
+        }
+
+        #comidas{
+            background-color: var(--color-primary-1);
+            border-radius: 1.5rem 1.5rem 0 0;
+
+        }
+
+        #bebidas{
+            background-color: var(--color-neutral-0);
+            
+            p{
+                color: var(--color-neutral-3);
+            }
+        }
+
+        #sobremesas{
+            background-color: var(--color-primary-2);
+            border-radius: 0 0 1.5rem 1.5rem;
+        }
+    }
+}
+
 @media (min-width: 768px) {
     #container {
         background-color: var(--color-neutral-0);
@@ -191,6 +240,33 @@ header {
     }
 
     #sobreNos {
+        padding: 13rem 5rem;
+        text-align: left;
         
+        p{
+            margin: 0;
+        }
+    }
+
+    #produtos {
+        .produtos-container {
+            flex-direction: row;
+            justify-content: center;
+            padding: 1rem 6rem;
+
+            .tipo-produto {
+                flex: 1;
+                padding: 13rem 2rem;
+
+            }
+
+            #comidas{
+                border-radius: 1.5rem 0 0 1.5rem;
+            }
+
+            #sobremesas{
+                border-radius: 0 1.5rem 1.5rem 0;
+            }
+        }
     }
 }
