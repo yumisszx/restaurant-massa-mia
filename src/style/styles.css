@@ -355,6 +355,47 @@ footer {
     }
 }
 
+#containerMenu {
+    #options{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+        gap: 3rem;
+
+        button{
+            padding: 0.5rem;
+            font-size: clamp(1rem, 1.1vw, 1.2rem);
+            background-color: var(--color-neutral-2);
+            border: none;
+            border-radius: 0.5rem;
+            color: var(--color-neutral-3);
+            box-shadow: 0 0 2px rgba(0,0,0,0.2);
+
+            &:hover{
+                background-color:var(--color-primary-1);
+                color: var(--color-neutral-0);
+            }
+        }
+
+
+    }
+
+    #produtosMenu {
+        padding: 2px;
+
+        .menu{
+            
+            .card{
+                img{
+                    width: clamp(10rem, 14vw, 15rem);
+                }
+            }
+        }
+    }
+}
+
 @media (min-width: 768px) {
     #container {
         background-color: var(--color-neutral-0);
