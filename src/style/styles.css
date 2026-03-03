@@ -350,8 +350,15 @@ footer {
         margin-top: 4rem;
         margin-bottom: 2rem;
         color: var(--color-neutral-3);
-        font-size: clamp(1rem, 3vw, 1.2rem);
+        font-size: clamp(0.8rem, 3vw, 1.2rem);
         font-weight: 500;
+    }
+
+    &#footerMenu{
+        margin-top: 25px;
+        #license{
+            margin: 0;
+        }
     }
 }
 
