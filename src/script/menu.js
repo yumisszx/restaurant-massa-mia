@@ -19,6 +19,7 @@ function mostrarMenu(event, id) {
   event.currentTarget.classList.add('active');
 }
 
+//direcionar pagina do menu
 window.addEventListener('DOMContentLoaded', () => {
 
   const params = new URLSearchParams(window.location.search);
