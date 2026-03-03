@@ -386,7 +386,12 @@ footer {
         padding: 2px;
 
         .menu{
-            
+            display: none;
+
+            &.active{
+                display: block;
+            }
+
             .card{
                 img{
                     width: clamp(10rem, 14vw, 15rem);
