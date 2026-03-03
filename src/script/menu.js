@@ -1,4 +1,4 @@
-function mostrarAba(event, id) {
+function mostrarMenu(event, id) {
 
   //esconde todas os menus
   const menus = document.querySelectorAll('.menu');
@@ -16,5 +16,36 @@ function mostrarAba(event, id) {
   document.getElementById(id).classList.add('active');
 
   //ativa botão clicado
-  event.target.classList.add('active');
+  event.currentTarget.classList.add('active');
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  const params = new URLSearchParams(window.location.search);
+  const aba = params.get('aba');
+
+  if (aba) {
+
+    //remove active de tudo
+    document.querySelectorAll('.menu').forEach(menu => {
+      menu.classList.remove('active');
+    });
+
+    document.querySelectorAll('.menu-btn').forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    //ativa menu direcionado
+    const menuAtivo = document.getElementById(aba);
+    if (menuAtivo) {
+      menuAtivo.classList.add('active');
+    }
+
+    //ativa botão correto
+    const botaoAtivo = document.querySelector(`[data-id="${aba}"]`);
+    if (botaoAtivo) {
+      botaoAtivo.classList.add('active');
+    }
+  }
+
+});
