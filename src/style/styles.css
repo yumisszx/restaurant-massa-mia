@@ -354,9 +354,10 @@ footer {
         font-weight: 500;
     }
 
-    &#footerMenu{
+    &#footerMenu {
         margin-top: 25px;
-        #license{
+
+        #license {
             margin: 0;
         }
     }
@@ -422,12 +423,12 @@ footer {
                     box-shadow: 0 0 2px rgba(232, 189, 80, 0.479);
                 }
 
-                h2{
+                h2 {
                     font-family: "Crimson Pro";
                     margin: 1rem 0;
                 }
 
-                data{
+                data {
                     color: var(--color-primary-1);
                     font-weight: 700;
                     font-size: 1.5rem;
@@ -542,4 +543,18 @@ footer {
             }
         }
     }
+
+    #containerMenu {
+        #produtosMenu {
+            .menu {
+                &.active {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 3rem;
+                }
+            }
+        }
+    }
+}
 }
