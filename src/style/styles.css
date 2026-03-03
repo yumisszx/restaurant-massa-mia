@@ -14,7 +14,7 @@
 
 #container {
     background-color: var(--color-neutral-1);
-    
+
 }
 
 :root {
@@ -29,20 +29,20 @@
 }
 
 ::-webkit-scrollbar {
-  height: 12px;
+    height: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-neutral-0);
+    background: var(--color-neutral-0);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-neutral-2);
-  border-radius: 5px;
+    background: var(--color-neutral-2);
+    border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-neutral-3);
+    background: var(--color-neutral-3);
 }
 
 .btn {
@@ -60,12 +60,12 @@
 }
 
 .title {
-        font-size: clamp(2rem, 5vw, 3rem);
-        color: var(--color-neutral-2);
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        font-weight: 400;
-    }
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--color-neutral-2);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
 
 header {
     background-color: var(--color-neutral-1);
@@ -99,7 +99,7 @@ header {
             padding: 1rem;
 
             &.show {
-                display:flex;
+                display: flex;
             }
 
             li {
@@ -172,8 +172,8 @@ header {
     padding: 2rem 1rem;
     background-color: var(--color-neutral-1);
     text-align: center;
-    
-    .title{
+
+    .title {
         color: var(--color-primary-2);
     }
 
@@ -184,7 +184,7 @@ header {
         .tipo-produto {
             padding: 3rem 1rem;
 
-            a :hover{
+            a :hover {
                 color: var(--color-neutral-3);
             }
 
@@ -204,21 +204,21 @@ header {
             }
         }
 
-        #comidas{
+        #comidas {
             background-color: var(--color-primary-1);
             border-radius: 1.5rem 1.5rem 0 0;
 
         }
 
-        #bebidas{
+        #bebidas {
             background-color: var(--color-neutral-0);
-            
-            p{
+
+            p {
                 color: var(--color-neutral-3);
             }
         }
 
-        #sobremesas{
+        #sobremesas {
             background-color: var(--color-primary-2);
             border-radius: 0 0 1.5rem 1.5rem;
         }
@@ -230,14 +230,14 @@ header {
     background-color: var(--color-neutral-1);
     text-align: center;
 
-    .title{
+    .title {
         color: var(--color-primary-2);
     }
 
-    .novidades-info{
+    .novidades-info {
         padding: 2rem 1rem;
 
-        h3{
+        h3 {
             font-size: clamp(1.5rem, 4vw, 2.2rem);
             color: var(--color-primary-1);
             text-transform: uppercase;
@@ -260,34 +260,34 @@ header {
     background-color: var(--color-neutral-1);
     text-align: center;
 
-    .title{
+    .title {
         color: var(--color-neutral-3);
         font-weight: 600;
     }
 
-    .avaliacao-container{
+    .avaliacao-container {
         display: flex;
         flex-direction: column;
 
-        .avaliacao-coment{
-        background-color: var(--color-neutral-2);
-        border-radius: 1.5rem;
-        margin-top: 4rem;
-        padding: 2rem;
+        .avaliacao-coment {
+            background-color: var(--color-neutral-2);
+            border-radius: 1.5rem;
+            margin-top: 4rem;
+            padding: 2rem;
 
-            .fa-user{
-                font-size: clamp(5rem, 8vw, 6rem); 
+            .fa-user {
+                font-size: clamp(5rem, 8vw, 6rem);
             }
 
-            #user1{
+            #user1 {
                 color: var(--color-primary-1);
             }
 
-            #user2{
+            #user2 {
                 color: var(--color-neutral-0);
             }
 
-            #user3{
+            #user3 {
                 color: var(--color-primary-2);
             }
 
@@ -307,34 +307,34 @@ footer {
     padding: 1rem 0;
 
 
-    .title{
+    .title {
         color: var(--color-neutral-3);
         font-size: clamp(1.5rem, 4vw, 2rem);
         font-weight: 600;
         margin-top: 5rem;
     }
 
-    .contatos{
+    .contatos {
         margin-top: 5rem;
 
-        h3{
+        h3 {
             color: var(--color-neutral-3);
             font-size: clamp(1.5rem, 2vw, 2rem);
         }
 
-        #t-endereco{
+        #t-endereco {
             color: var(--color-primary-1);
         }
 
-        #t-email{
+        #t-email {
             color: var(--color-neutral-0);
         }
 
-        #t-telefone{
+        #t-telefone {
             color: var(--color-primary-2);
         }
 
-        p{
+        p {
             color: var(--color-neutral-3);
             font-size: clamp(1.5rem, 4vw, 2rem);
             padding: 0.5rem 1rem;
@@ -346,7 +346,7 @@ footer {
         }
     }
 
-    #license{
+    #license {
         margin-top: 4rem;
         margin-bottom: 2rem;
         color: var(--color-neutral-3);
@@ -356,25 +356,25 @@ footer {
 }
 
 #containerMenu {
-    #options{
+    #options {
         display: flex;
         text-align: center;
         align-items: center;
         justify-content: center;
         padding: 1rem 1.5rem;
-        gap: 3rem;
+        gap: clamp(1rem, 5vw, 3rem);
 
-        button{
+        button {
             padding: 0.5rem;
             font-size: clamp(1rem, 1.1vw, 1.2rem);
             background-color: var(--color-neutral-2);
             border: none;
             border-radius: 0.5rem;
             color: var(--color-neutral-3);
-            box-shadow: 0 0 2px rgba(0,0,0,0.2);
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 
-            &:hover{
-                background-color:var(--color-primary-1);
+            &:hover {
+                background-color: var(--color-primary-1);
                 color: var(--color-neutral-0);
             }
         }
@@ -384,17 +384,46 @@ footer {
 
     #produtosMenu {
         padding: 2px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
 
-        .menu{
+        .menu {
             display: none;
 
-            &.active{
+
+            &.active {
                 display: block;
             }
 
-            .card{
-                img{
+            .card {
+                background-color: var(--color-neutral-1);
+                width: clamp(15rem, 28vw, 22rem);
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0.5rem;
+                padding: 1.5rem;
+                box-shadow: 0 0 2px rgba(0, 0, 0, 0.058);
+                margin-top: 2rem;
+                color: var(--color-neutral-3);
+
+                img {
                     width: clamp(10rem, 14vw, 15rem);
+                    border-radius: 0.5rem;
+                    box-shadow: 0 0 2px rgba(232, 189, 80, 0.479);
+                }
+
+                h2{
+                    font-family: "Crimson Pro";
+                    margin: 1rem 0;
+                }
+
+                data{
+                    color: var(--color-primary-1);
+                    font-weight: 700;
+                    font-size: 1.5rem;
                 }
             }
         }
@@ -443,8 +472,8 @@ footer {
     #sobreNos {
         padding: 13rem 5rem;
         text-align: left;
-        
-        p{
+
+        p {
             margin: 0;
         }
     }
@@ -461,11 +490,11 @@ footer {
 
             }
 
-            #comidas{
+            #comidas {
                 border-radius: 1.5rem 0 0 1.5rem;
             }
 
-            #sobremesas{
+            #sobremesas {
                 border-radius: 0 1.5rem 1.5rem 0;
             }
         }
@@ -473,14 +502,14 @@ footer {
 
     #novidades {
 
-        .novidades-info{
+        .novidades-info {
             text-align: left;
 
-            h3{
+            h3 {
                 padding-left: clamp(0rem, 17vw, 19rem);
             }
 
-            p{
+            p {
                 max-width: 700px;
                 padding-left: 4rem;
             }
@@ -493,14 +522,14 @@ footer {
         justify-content: center;
         align-items: center;
 
-        .avaliacao-container{
+        .avaliacao-container {
             flex-direction: row;
             gap: 2rem;
             max-width: 85vw;
-            
-            
 
-            .avaliacao-coment{
+
+
+            .avaliacao-coment {
                 flex: 1;
 
             }
