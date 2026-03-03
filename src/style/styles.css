@@ -496,6 +496,10 @@ footer {
                 flex: 1;
                 padding: 13rem 2rem;
 
+                &:hover{
+                    padding: 13rem 5rem;
+                }
+
             }
 
             #comidas {
