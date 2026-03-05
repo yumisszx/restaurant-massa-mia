@@ -1,0 +1,54 @@
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+
+# Logs
+*.log
+logs/
+
+# Arquivos de ambiente
+.env
+.env.*
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Arquivos de banco local
+*.db
+application.properties
+application-dev.properties
+
+# Maven wrapper cache
+.mvn/wrapper/maven-wrapper.properties
+
+# Node (caso tenha frontend depois)
+node_modules/
+
+# Build frontend
+dist/
+
