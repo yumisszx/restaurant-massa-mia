@@ -19,6 +19,16 @@ target/
 *.iml
 *.ipr
 
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
 ### VS Code ###
 .vscode/
 
@@ -46,9 +56,8 @@ application-dev.properties
 # Maven wrapper cache
 .mvn/wrapper/maven-wrapper.properties
 
-# Node (caso tenha frontend depois)
-node_modules/
-
-# Build frontend
-dist/
-
+# Default ignored files
+/shelf/
+/workspace.xml
+# Ignored default folder with query files
+/queries/

@@ -1,4 +1,4 @@
-package com.massamia.massa_mia_api;
+package com.massaMia.massaMiaApi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.massamia.massa_mia_api;
+package com.massaMia.massaMiaApi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
