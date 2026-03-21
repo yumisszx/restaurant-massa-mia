@@ -17,17 +17,22 @@ import java.util.UUID;
 public class ProdutoController {
 
     @Autowired
-    private ProdutoRepository repository;
+    private final ProdutoRepository repository;
+    private final TipoProdutoRepository tipoRepository;
+
+    public ProdutoController(ProdutoRepository repository, TipoProdutoRepository tipoRepository) {
+        this.repository = repository;
+        this.tipoRepository = tipoRepository;
+    }
 
     @CrossOrigin(origins =  "*", allowedHeaders = "*")
     @PostMapping
-    public void saveProduto(@RequestBody ProdutoRequestDTO data, TipoProdutoRepository tipoRepository) {
+    public void saveProduto(@RequestBody ProdutoRequestDTO data) {
         TipoProduto tipo = tipoRepository.findById(data.idTipoProduto())
                 .orElseThrow(() -> new RuntimeException("Tipo não encontrado"));
 
-        Produto produtoData = new Produto(data,tipo);
+        Produto produtoData = new Produto(data, tipo);
         repository.save(produtoData);
-        return;
     }
 
     @CrossOrigin(origins =  "*", allowedHeaders = "*")

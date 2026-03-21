@@ -23,7 +23,7 @@ public class Produto {
     private String nome;
     private String descricao;
     private String imagem;
-    private float preco;
+    private Float preco;
 
     @ManyToOne
     @JoinColumn(name = "idTipoProduto")
