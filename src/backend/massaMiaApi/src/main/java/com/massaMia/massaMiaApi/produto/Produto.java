@@ -14,12 +14,12 @@ import java.util.UUID;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(of = "Id")
+@EqualsAndHashCode(of = "id")
 
 public class Produto {
 
     @Id @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID Id;
+    private UUID id;
     private String nome;
     private String descricao;
     private String imagem;
