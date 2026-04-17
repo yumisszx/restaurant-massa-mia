@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useProdutoDataMutate } from "../../hooks/useProdutoDataMutate"
 import type { ProdutoData } from "../../interface/ProdutoData"
 import type { TipoProdutoData } from "../../interface/TipoProdutoData"
@@ -10,6 +10,9 @@ interface InputProps {
     updateValue(value: any): void
 }
 
+interface ModalProps {
+    closeModal(): void
+}
 
 const Input = ({ label, value, updateValue }: InputProps) => {
     return (
@@ -20,14 +23,14 @@ const Input = ({ label, value, updateValue }: InputProps) => {
     )
 }
 
-export function CreateModal() {
+export function CreateModal({ closeModal }: ModalProps) {
     const [imagem, setImagem] = useState("");
     const [nome, setNome] = useState("");
     const [descricao, setDescricao] = useState("");
     const [preco, setPreco] = useState(0);
     const [tipo, setTipo] = useState<TipoProdutoData | null>(null);
     const { data: tipos } = useTipoProduto();
-    const { mutate } = useProdutoDataMutate();
+    const { mutate, isSuccess, isPending } = useProdutoDataMutate();
 
     const submit = () => {
         if (!tipo) {
@@ -45,6 +48,11 @@ export function CreateModal() {
         mutate(produtoData);
     }
 
+    useEffect(() => {
+        if (!isSuccess) return
+        closeModal();
+    }, [isSuccess])
+
 
     return (
         <div className="modal-overlay">
@@ -52,10 +60,16 @@ export function CreateModal() {
                 <h2>Cadastre novo item</h2>
 
                 <form className="input-container">
-                    <Input label="imagem" value={imagem} updateValue={setImagem} />
-                    <Input label="nome" value={nome} updateValue={setNome} />
-                    <Input label="descricao" value={descricao} updateValue={setDescricao} />
-                    <Input label="preco" value={preco} updateValue={setPreco} />
+                    <input type="file" accept="image/*" onChange={(e) => {
+                            const file = e.target.files?.[0];
+                            if (file) {
+                                setImagem(file.name);
+                            }
+                        }}
+                    />
+                    <Input label="Nome" value={nome} updateValue={setNome} />
+                    <Input label="Descrição" value={descricao} updateValue={setDescricao} />
+                    <Input label="Preço" value={preco} updateValue={setPreco} />
                     <select onChange={(e) => {
                         const tipoSelecionado = tipos?.find(
                             t => t.id === Number(e.target.value)
@@ -72,7 +86,9 @@ export function CreateModal() {
                     </select>
                 </form>
 
-                <button onClick={submit} className="btn-secundary">Inserir</button>
+                <button onClick={submit} className="btn-secundary">
+                    {isPending ? 'Inserindo...' : 'Inserir'}
+                </button>
             </div>
         </div>
     )
