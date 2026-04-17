@@ -1,7 +1,7 @@
 package com.MassaMia.MassaMiaApi.tipoproduto;
 
-public record TipoProdutoResponseDTO(String nome) {
+public record TipoProdutoResponseDTO(Integer id, String nome) {
     public TipoProdutoResponseDTO(TipoProduto tipoProduto) {
-        this(tipoProduto.getNome());
+        this(tipoProduto.getId(),tipoProduto.getNome());
     }
 }

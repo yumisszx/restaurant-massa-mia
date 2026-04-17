@@ -1,4 +1,6 @@
 package com.MassaMia.MassaMiaApi.produto;
 
-public record ProdutoRequestDTO(String nome, String descricao, String imagem, float preco, Integer idTipoProduto) {
+import com.MassaMia.MassaMiaApi.tipoproduto.TipoProduto;
+
+public record ProdutoRequestDTO(String nome, String descricao, String imagem, float preco, TipoProduto tipo) {
 }

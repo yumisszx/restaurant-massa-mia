@@ -26,7 +26,7 @@ public class Produto {
     private Float preco;
 
     @ManyToOne
-    @JoinColumn(name = "idTipoProduto")
+    @JoinColumn(name = "id_tipo", nullable = false)
     private TipoProduto tipo;
 
     public Produto(ProdutoRequestDTO data, TipoProduto tipo) {

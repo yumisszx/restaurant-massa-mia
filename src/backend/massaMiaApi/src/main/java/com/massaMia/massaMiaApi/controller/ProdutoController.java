@@ -28,7 +28,7 @@ public class ProdutoController {
     @CrossOrigin(origins =  "*", allowedHeaders = "*")
     @PostMapping
     public void saveProduto(@RequestBody ProdutoRequestDTO data) {
-        TipoProduto tipo = tipoRepository.findById(data.idTipoProduto())
+        TipoProduto tipo = tipoRepository.findById(data.tipo().getId())
                 .orElseThrow(() -> new RuntimeException("Tipo não encontrado"));
 
         Produto produtoData = new Produto(data, tipo);

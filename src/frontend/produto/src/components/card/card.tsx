@@ -1,14 +1,18 @@
 import "./card.css"
 
-interface CardProps{
+interface CardProps {
     preco: number,
     nome: string,
     imagem: string,
     descricao: string
+    tipo: {
+        id?: number;
+        nome: string;
+    };
 }
 
-export function Card({preco, imagem, nome, descricao}: CardProps){
-    return(
+export function Card({ preco, imagem, nome, descricao }: CardProps) {
+    return (
         <div className="card">
             <img src={imagem} alt={nome} />
             <h2>{nome}</h2>
