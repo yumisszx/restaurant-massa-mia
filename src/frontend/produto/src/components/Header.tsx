@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import './header.css'
 
 const Header: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header>
       <nav className="navbar">
         <p className="name">Massa Mia</p>
 
-        <button className="btn btn-mobile">
-          <i className="fa-solid fa-bars"></i>
+        <button
+          className="btn btn-mobile"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <i className={`fa-solid ${menuOpen ? "fa-times" : "fa-bars"}`}></i>
         </button>
 
-        <ul id="nav-links">
+        <ul id="nav-links" className={menuOpen ? "show" : ""}>
           <li>
             <a href="#produtos">Produtos</a>
           </li>
