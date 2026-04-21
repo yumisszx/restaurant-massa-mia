@@ -1,5 +1,3 @@
-import "./card.css"
-
 interface CardProps {
     preco: number,
     nome: string,
@@ -11,13 +9,20 @@ interface CardProps {
     };
 }
 
-export function Card({ preco, imagem, nome, descricao }: CardProps) {
+export function Card({ preco, imagem, nome, descricao, tipo }: CardProps) {
     return (
-        <div className="card">
-            <img src={imagem} alt={nome} />
-            <h2>{nome}</h2>
-            <p>{descricao}</p>
-            <span>R$ {preco}</span>
+        <div className={`card ${tipo.nome.toLowerCase()}`}>
+            <img src={imagem} alt={nome} className="card-img" />
+
+            <div className="card-content">
+                <h2 className="card-title">{nome}</h2>
+
+                <p className="card-description">{descricao}</p>
+
+                <span className="card-price">
+                    {preco.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}
+                </span>
+            </div>
         </div>
-    )
+    );
 }
