@@ -35,6 +35,8 @@ export function Modal({ produto, closeModal }: ModalProps) {
     const [preco, setPreco] = useState(produto?.preco || 0);
     const [tipo, setTipo] = useState<TipoProdutoData | null>(produto?.tipo || null);
 
+    const [fileName, setFileName] = useState("Adicionar Imagem");
+
     const { data: tipos } = useTipoProduto();
 
     const {
@@ -69,7 +71,7 @@ export function Modal({ produto, closeModal }: ModalProps) {
                     descricao,
                     preco,
                     imagem: imagemUrl,
-                    idTipoProduto: tipo.id
+                    tipo: { id: tipo.id }
                 }
             });
         } else {
@@ -91,17 +93,30 @@ export function Modal({ produto, closeModal }: ModalProps) {
 
     return (
         <div className="modal-overlay">
-            <div className="modal-body">
+            <div className="modal-body" >
+                <button className="btn-close" onClick={closeModal}>
+                    ✖
+                </button>
+
                 <h2>{isEdit ? "Editar produto" : "Novo produto"}</h2>
 
                 <form className="input-container">
-                    <input
-                        type="file"
-                        onChange={(e) => {
-                            const file = e.target.files?.[0];
-                            if (file) setImagemFile(file);
-                        }}
-                    />
+                    <label className="btn-upload">
+                        <input
+                            type="file"
+                            hidden
+                            onChange={(e) => {
+                                const file = e.target.files?.[0];
+                                if (file) {
+                                    setImagemFile(file);
+                                    setFileName(file.name);
+                                }
+                            }}
+                        />
+                        {fileName}
+
+                    </label>
+
                     <Input label="Nome" value={nome} updateValue={setNome} />
                     <Input label="Descrição" value={descricao} updateValue={setDescricao} />
                     <Input label="Preço" value={preco} updateValue={setPreco} />
@@ -122,7 +137,7 @@ export function Modal({ produto, closeModal }: ModalProps) {
                     </select>
                 </form>
 
-                <button onClick={submit}>
+                <button onClick={submit} className="btn-save">
                     {isEdit
                         ? (isPendingUpdate ? "Salvando..." : "Salvar")
                         : (isPendingCreate ? "Criando..." : "Criar")
