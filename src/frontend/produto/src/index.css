@@ -250,6 +250,19 @@ h1 {
     width: 400px;
     max-width: 90%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.modal-body h2{
+  text-transform: uppercase;
+  color: #663e03;
+  font-family: 'Poppins', cursive;
+}
+
+.input-container{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {
