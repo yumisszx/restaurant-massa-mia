@@ -1,31 +1,16 @@
+import bannerFachada from '../../assets/fachadaMassaMia.png'
 
-const Header: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
+const Index: React.FC = () => {
   return (
-    <header>
-      <nav className="navbar">
-        <p className="name">Massa Mia</p>
+    <main>
+        <div className="container-main">
+            <div className="banner-inicial">
+                <img src={bannerFachada} alt='Banner Fachada Massa Mia'></img>
 
-        <button
-          className="btn btn-mobile"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <i className={`fa-solid ${menuOpen ? "fa-times" : "fa-bars"}`}></i>
-        </button>
-
-        <ul id="nav-links" className={menuOpen ? "show" : ""}>
-          <li>
-            <a href="#produtos">Produtos</a>
-          </li>
-
-          <li>
-            <a href="">Sobre Nós</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+            </div>
+        </div>
+    </main>
   );
 };
 
-export default Header;
+export default Index;
