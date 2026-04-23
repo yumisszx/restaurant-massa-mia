@@ -2,19 +2,29 @@ import Header from './components/Header';
 import { Card } from './components/card/card';
 import { useProdutoData } from './hooks/useProdutoData';
 import { useState, useEffect } from 'react';
-import { CreateModal } from './components/create-modal/create-modal';
+import { Modal } from './components/create-modal/modal';
+import type { ProdutoData } from './interface/ProdutoData';
 
 function App() {
   const { data } = useProdutoData();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [categoriaAtiva, setCategoriaAtiva] = useState("comida");
+  const [produtoSelecionado, setProdutoSelecionado] = useState<ProdutoData | null>(null);
 
-  const handleOpenModal = () => {
-    setIsModalOpen(prev => !prev);
+  const openModalCreate = () => {
+    setProdutoSelecionado(null);
+    setIsModalOpen(true);
   };
 
-  // Mapeamento das categorias (ajuste conforme seu backend)
+  const openModalEdit = (produto: ProdutoData) => {
+    setProdutoSelecionado(produto);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => setIsModalOpen(false);
+
+  // categorias disponiveis
   const categorias: Record<string, number> = {
     bebida: 1,
     sobremesa: 2,
@@ -26,7 +36,7 @@ function App() {
     produto.tipo?.id === categorias[categoriaAtiva]
   );
 
-  // Opcional: pegar categoria pela URL (?aba=comida)
+  // pegar categoria pela URL 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const aba = params.get("aba");
@@ -41,6 +51,10 @@ function App() {
       <Header />
 
       <h1>Menu</h1>
+
+      <button className='btn-add-produto' onClick={openModalCreate}>
+        Adicionar produto
+      </button>
 
       <section id="options">
         <button
@@ -71,11 +85,13 @@ function App() {
             {produtosFiltrados?.map(produtoData => (
               <Card
                 key={produtoData.id}
+                id={produtoData.id!}
                 preco={produtoData.preco}
                 nome={produtoData.nome}
                 imagem={produtoData.imagem}
                 descricao={produtoData.descricao}
                 tipo={produtoData.tipo ?? { id: 0, nome: "Sem tipo" }}
+                onEdit={openModalEdit}
               />
             ))}
           </div>
@@ -83,12 +99,13 @@ function App() {
       </div>
 
       {isModalOpen && (
-        <CreateModal closeModal={handleOpenModal} />
+        <Modal
+          produto={produtoSelecionado ?? undefined}
+          closeModal={closeModal}
+        />
       )}
 
-      <button onClick={handleOpenModal}>
-        Adicionar produto
-      </button>
+      
     </div>
   );
 }

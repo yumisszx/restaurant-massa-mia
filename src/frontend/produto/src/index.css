@@ -14,20 +14,20 @@
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-neutral-0);
+  background: var(--color-neutral-0);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--color-neutral-2);
-    border-radius: 5px;
+  background: var(--color-neutral-2);
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-neutral-3);
+  background: var(--color-neutral-3);
 }
 
 :root {
@@ -220,6 +220,38 @@ h1 {
   font-size: 1.5rem;
 }
 
+.btn-add-produto {
+  padding: 0.5rem;
+  font-size: clamp(1rem, 1.1vw, 1.2rem);
+  background-color: var(--color-primary-1);
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--color-neutral-1);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    width: 95vw;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.modal-body {
+    background: var(--color-neutral-0);
+    padding: 24px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
 @media (min-width: 768px) {
   .navbar .btn-mobile {
     display: none;
@@ -233,6 +265,5 @@ h1 {
     gap: 2.5rem;
     width: auto;
     padding: 0;
-
   }
 }

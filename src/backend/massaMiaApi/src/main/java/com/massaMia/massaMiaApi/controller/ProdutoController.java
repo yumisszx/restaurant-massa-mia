@@ -7,8 +7,12 @@ import com.MassaMia.MassaMiaApi.produto.ProdutoResponseDTO;
 import com.MassaMia.MassaMiaApi.tipoproduto.TipoProduto;
 import com.MassaMia.MassaMiaApi.tipoproduto.TipoProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
@@ -51,4 +55,20 @@ public class ProdutoController {
         return "Produto deletado com sucesso";
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @PutMapping("/{id}")
+    public void updateProduto(
+            @PathVariable UUID id,
+            @RequestBody ProdutoRequestDTO data
+    ) {
+        Produto produto = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Produto não encontrado"));
+
+        TipoProduto tipo = tipoRepository.findById(data.tipo().getId())
+                .orElseThrow(() -> new RuntimeException("Tipo não encontrado"));
+
+        produto.atualizarDados(data, tipo);
+
+        repository.save(produto);
+    }
 }

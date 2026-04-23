@@ -1,4 +1,8 @@
+import { useDeleteProduto } from "../../hooks/useDeleteProduto";
+import type { ProdutoData } from "../../interface/ProdutoData";
+
 interface CardProps {
+    id: string,
     preco: number,
     nome: string,
     imagem: string,
@@ -7,9 +11,21 @@ interface CardProps {
         id?: number;
         nome: string;
     };
+    onEdit: (produto: ProdutoData) => void;
 }
 
-export function Card({ preco, imagem, nome, descricao, tipo }: CardProps) {
+export function Card({ id, preco, imagem, nome, descricao, tipo, onEdit }: CardProps) {
+
+    const { mutate } = useDeleteProduto();
+
+    const handleDelete = () => {
+        if (confirm("Tem certeza que deseja deletar?")) {
+            mutate(id);
+        }
+    };
+
+    const produto = { id, preco, imagem, nome, descricao, tipo };
+
     return (
         <div className={`card ${tipo.nome.toLowerCase()}`}>
             <img src={imagem} alt={nome} className="card-img" />
@@ -20,8 +36,19 @@ export function Card({ preco, imagem, nome, descricao, tipo }: CardProps) {
                 <p className="card-description">{descricao}</p>
 
                 <span className="card-price">
-                    {preco.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}
+                    {preco.toLocaleString("pt-BR", {
+                        style: "currency",
+                        currency: "BRL"
+                    })}
                 </span>
+
+                <button onClick={handleDelete} className="btn-delete">
+                    Deletar
+                </button>
+
+                <button onClick={() => onEdit(produto)}>
+                    Editar
+                </button>
             </div>
         </div>
     );
