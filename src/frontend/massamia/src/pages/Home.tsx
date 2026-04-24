@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import bannerFachada from './../assets/fachadaMassaMia.png'
+import imgCozinha from './../assets/interiorMassaMia.png'
+import imgRecepcao from './../assets/recepcaoMassaMia.png'
 
 import { useEffect, useState } from "react";
 
@@ -24,10 +26,10 @@ const Home: React.FC = () => {
 
     return (
         <main>
-            <div className="container-main">
+            <div className="container">
                 <div className="banner-inicial">
-                    <img src={bannerFachada} alt='Banner Fachada Massa Mia'></img>
-                    <p>A <span>experiência</span> gastronômica em seu país</p>
+                    <img src={bannerFachada} alt="Banner Fachada Massa Mia"></img>
+                    <h2>A <span>experiência</span> gastronômica em seu país</h2>
                 </div>
 
                 <div className='rota-menu'>
@@ -38,11 +40,13 @@ const Home: React.FC = () => {
                     </section>
 
                     <section className='img-section'>
-
+                        <img src={imgCozinha} alt="Cozinha Massa Mia" />
                     </section>
 
                     <section className='main-section'>
+                        <h3>Gastronomia <br />Italiana</h3>
 
+                        <p>Desfrute das melhores comidas, das mais saborosas sobremesas e dos deliciosos drinks! <br />Aproveite cada sabor!</p>
 
                         <button onClick={() => Navigate("/menu")}>
                             menu
@@ -50,15 +54,27 @@ const Home: React.FC = () => {
                     </section>
                 </div>
 
-                <div className='sobre-nos'>
+                <div className='container-sobre-nos'>
                     <section className='main-section'>
+                        <h3 id="sobre-nos">Sobre Nós</h3>
 
+                        <p>Fundada em 2024, o restaurante italiano Massa Mia tem o intuito de entregar ao Brasil parte da culinária tão prestigiada, além da estética vislumbrante do território. <br />É mais que um estabelecimento, é a experiência italiana completa!</p>
                     </section>
 
                     <section className='img-section'>
-
+                        <img src={imgRecepcao} alt="Recepção Massa Mia" />
                     </section>
                 </div>
+
+                {/*impletação futura
+                <div className="container-avaliacao">
+
+                </div>
+
+                <div className="container-eventos">
+
+                </div>
+                */}
             </div>
         </main>
     );
