@@ -1,10 +1,10 @@
-import Header from './components/Header';
-import { Card } from './components/card/card';
-import { useProdutoData } from './hooks/useProdutoData';
+import Header from '../components/Header';
+import { Card } from '../components/card/card';
+import { useProdutoData } from '../hooks/useProdutoData';
 import { useState, useEffect } from 'react';
-import { Modal } from './components/create-modal/modal';
-import type { ProdutoData } from './interface/ProdutoData';
-import Footer from './components/Footer';
+import { Modal } from '../components/create-modal/modal';
+import type { ProdutoData } from '../interface/ProdutoData';
+import Footer from '../components/Footer';
 
 function App() {
   const { data } = useProdutoData();
