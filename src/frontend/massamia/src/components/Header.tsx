@@ -22,7 +22,7 @@ const Header: React.FC = () => {
           </li>
 
           <li>
-            <a href="">Sobre Nós</a>
+            <Link to="/#sobre-nos" >Sobre Nós</Link>
           </li>
         </ul>
       </nav>

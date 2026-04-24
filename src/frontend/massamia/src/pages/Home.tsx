@@ -4,6 +4,7 @@ import imgCozinha from './../assets/interiorMassaMia.png'
 import imgRecepcao from './../assets/recepcaoMassaMia.png'
 
 import { useEffect, useState } from "react";
+import Header from "../components/Header";
 
 const Home: React.FC = () => {
     const [textoDivisoria, setTextoDivisoria] = useState(0);
@@ -27,11 +28,14 @@ const Home: React.FC = () => {
     return (
         <main>
             <div className="container">
-                <div className="banner-inicial">
-                    <img src={bannerFachada} alt="Banner Fachada Massa Mia"></img>
-                    <h2>A <span>experiência</span> gastronômica em seu país</h2>
-                </div>
+                <Header />
 
+                <div className="banner-inicial">
+                    <h2>A <span>experiência</span> gastronômica em seu país</h2>
+                    <img src={bannerFachada} alt="Banner Fachada Massa Mia"></img>
+
+                </div>
+                
                 <div className='rota-menu'>
                     <section className='divisoria'>
                         <p className='texto-animado'>
@@ -39,19 +43,18 @@ const Home: React.FC = () => {
                         </p>
                     </section>
 
-                    <section className='img-section'>
-                        <img src={imgCozinha} alt="Cozinha Massa Mia" />
-                    </section>
-
-                    <section className='main-section'>
-                        <h3>Gastronomia <br />Italiana</h3>
-
-                        <p>Desfrute das melhores comidas, das mais saborosas sobremesas e dos deliciosos drinks! <br />Aproveite cada sabor!</p>
-
-                        <button onClick={() => Navigate("/menu")}>
-                            menu
-                        </button>
-                    </section>
+                    <div className="menu-section">
+                        <section className='img-section'>
+                            <img src={imgCozinha} alt="Cozinha Massa Mia" />
+                        </section>
+                        <section className='main-section'>
+                            <h3>Gastronomia <br />Italiana</h3>
+                            <p>Desfrute das melhores comidas, das mais saborosas sobremesas e dos deliciosos drinks! <br />Aproveite cada sabor!</p>
+                            <button className="btn-rota-menu" onClick={() => Navigate("/menu")}>
+                                menu
+                            </button>
+                        </section>
+                    </div>
                 </div>
 
                 <div className='container-sobre-nos'>

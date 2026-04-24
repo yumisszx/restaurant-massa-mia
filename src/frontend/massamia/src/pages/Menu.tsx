@@ -48,7 +48,7 @@ function Menu() {
   }, []);
 
   return (
-    <div className='container'>
+    <div className='container-menu'>
       <Header />
 
       <h1>Menu</h1>
