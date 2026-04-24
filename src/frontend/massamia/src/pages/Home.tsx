@@ -1,9 +1,12 @@
-import bannerFachada from '../../assets/fachadaMassaMia.png'
+import { useNavigate } from "react-router-dom";
+import bannerFachada from './../assets/fachadaMassaMia.png'
 
 import { useEffect, useState } from "react";
 
-const Index: React.FC = () => {
+const Home: React.FC = () => {
     const [textoDivisoria, setTextoDivisoria] = useState(0);
+
+    const Navigate = useNavigate();
 
     const textos = [
         "Conheça nossos produtos!",
@@ -26,6 +29,7 @@ const Index: React.FC = () => {
                     <img src={bannerFachada} alt='Banner Fachada Massa Mia'></img>
                     <p>A <span>experiência</span> gastronômica em seu país</p>
                 </div>
+
                 <div className='rota-menu'>
                     <section className='divisoria'>
                         <p className='texto-animado'>
@@ -39,6 +43,10 @@ const Index: React.FC = () => {
 
                     <section className='main-section'>
 
+
+                        <button onClick={() => Navigate("/menu")}>
+                            menu
+                        </button>
                     </section>
                 </div>
 
@@ -56,4 +64,4 @@ const Index: React.FC = () => {
     );
 };
 
-export default Index;
+export default Home;

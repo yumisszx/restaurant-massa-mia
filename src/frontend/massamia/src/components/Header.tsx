@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -6,7 +7,7 @@ const Header: React.FC = () => {
   return (
     <header>
       <nav className="navbar">
-        <p className="name">Massa Mia</p>
+        <Link to="/" className="name">Massa Mia</Link>
 
         <button
           className="btn btn-mobile"
@@ -17,7 +18,7 @@ const Header: React.FC = () => {
 
         <ul id="nav-links" className={menuOpen ? "show" : ""}>
           <li>
-            <a href="#produtos">Produtos</a>
+            <Link to="/menu" onClick={() => setMenuOpen(false)}>Produtos</Link>
           </li>
 
           <li>
