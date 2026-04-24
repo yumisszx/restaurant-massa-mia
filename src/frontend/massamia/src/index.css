@@ -368,7 +368,7 @@ footer p {
   color: var(--color-neutral-3);
   margin-top: 2rem;
 }
-
+/* css temporario
 .texto-animado {
   font-size: 1.5rem;
   transition: opacity 0.5s ease;
@@ -382,6 +382,20 @@ footer p {
   50% { opacity: 0; }
   100% { opacity: 0; }
 }
+.divisoria {
+  position: relative;
+  height: 40px;
+}
+
+.texto {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.texto.ativo {
+  opacity: 1;
+*/
 
 
 @media (min-width: 768px) {
