@@ -6,7 +6,7 @@ import { Modal } from '../components/create-modal/modal';
 import type { ProdutoData } from '../interface/ProdutoData';
 import Footer from '../components/Footer';
 
-function App() {
+function Menu() {
   const { data } = useProdutoData();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -111,4 +111,4 @@ function App() {
   );
 }
 
-export default App;
+export default Menu;
