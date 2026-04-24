@@ -45,10 +45,10 @@ export function Card({ id, preco, imagem, nome, descricao, tipo, onEdit }: CardP
             </div>
 
             <div className="btns-card">
-                <button onClick={handleDelete} className="btn-card btn-delete">
+                <button onClick={handleDelete} className="btn btn-card btn-delete">
                     Deletar
                 </button>
-                <button className="btn-card btn-edit" onClick={() => onEdit(produto)}>
+                <button className="btn btn-card btn-edit" onClick={() => onEdit(produto)}>
                     Editar
                 </button>
             </div>

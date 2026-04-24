@@ -53,27 +53,27 @@ function Menu() {
 
       <h1>Menu</h1>
 
-      <button className='btn-add-produto' onClick={openModalCreate}>
+      <button className='btn btn-add-produto' onClick={openModalCreate}>
         Adicionar produto
       </button>
 
       <section id="options">
         <button
-          className={`menu-btn ${categoriaAtiva === "comida" ? "active" : ""}`}
+          className={` btn menu-btn ${categoriaAtiva === "comida" ? "active" : ""}`}
           onClick={() => setCategoriaAtiva("comida")}
         >
           Comida
         </button>
 
         <button
-          className={`menu-btn ${categoriaAtiva === "bebida" ? "active" : ""}`}
+          className={`btn menu-btn ${categoriaAtiva === "bebida" ? "active" : ""}`}
           onClick={() => setCategoriaAtiva("bebida")}
         >
           Bebida
         </button>
 
         <button
-          className={`menu-btn ${categoriaAtiva === "sobremesa" ? "active" : ""}`}
+          className={`btn menu-btn ${categoriaAtiva === "sobremesa" ? "active" : ""}`}
           onClick={() => setCategoriaAtiva("sobremesa")}
         >
           Sobremesa

@@ -50,7 +50,7 @@ const Home: React.FC = () => {
                         <section className='main-section'>
                             <h3>Gastronomia <br />Italiana</h3>
                             <p>Desfrute das melhores comidas, das mais saborosas sobremesas e dos deliciosos drinks! <br />Aproveite cada sabor!</p>
-                            <button className="btn-rota-menu" onClick={() => Navigate("/menu")}>
+                            <button className="btn btn-rota-menu" onClick={() => Navigate("/menu")}>
                                 menu
                             </button>
                         </section>

@@ -94,14 +94,14 @@ export function Modal({ produto, closeModal }: ModalProps) {
     return (
         <div className="modal-overlay">
             <div className="modal-body" >
-                <button className="btn-close" onClick={closeModal}>
+                <button className="btn btn-close" onClick={closeModal}>
                     ✖
                 </button>
 
                 <h2>{isEdit ? "Editar produto" : "Novo produto"}</h2>
 
                 <form className="input-container">
-                    <label className="btn-upload">
+                    <label className="btn btn-upload">
                         <input
                             type="file"
                             hidden
@@ -137,7 +137,7 @@ export function Modal({ produto, closeModal }: ModalProps) {
                     </select>
                 </form>
 
-                <button onClick={submit} className="btn-save">
+                <button onClick={submit} className="btn btn-save">
                     {isEdit
                         ? (isPendingUpdate ? "Salvando..." : "Salvar")
                         : (isPendingCreate ? "Criando..." : "Criar")
