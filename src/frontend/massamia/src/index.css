@@ -32,13 +32,30 @@
 
 :root {
   --color-neutral-0: #ffffff;
-  --color-neutral-1: #fcf5eb;
-  --color-neutral-2: #e9c275;
-  --color-neutral-3: #663e03;
-  --color-neutral-4: #000000;
+  --color-neutral-1: #fff3df;
+  --color-neutral-2: #ffe2af;
+  --color-neutral-3: #e9c275;
+  --color-neutral-4: #a57c2e;
+  --color-neutral-5: #7a541b;
+  --color-neutral-6: #4f3104;
 
-  --color-primary-1: #226924;
-  --color-primary-2: #d82500;
+  --color-txt-dark-1: #4f3104;
+  --color-txt-dark-2: #4e412e;
+  --color-txt-dark-3: #043804;
+  --color-txt-dark-4: #540d00;
+
+  --color-txt-light-1: #fffbf4;
+  --color-txt-light-2: #f0e9dd;
+  --color-txt-light-3: #f5fff4;
+  --color-txt-light-4: #fff5f4;
+
+  --green-principal: #226924;
+  --green-dark: #194c1a;
+  --green-light: #359e38;
+
+  --red-principal: #d82500;
+  --red-dark: #a72207;
+  --red-light: #f83d17;
 }
 
 .container {
@@ -368,11 +385,22 @@ footer p {
   color: var(--color-neutral-3);
   margin-top: 2rem;
 }
-/* css temporario
+
+
+/*animação texto divisor */
+.divisoria {
+  position: relative;
+  height: 40px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
 .texto-animado {
   font-size: 1.5rem;
   transition: opacity 0.5s ease;
   animation: fade 3s infinite;
+  color: var(--color-txt-dark-2);
 }
 
 @keyframes fade {
@@ -395,8 +423,10 @@ footer p {
 
 .texto.ativo {
   opacity: 1;
-*/
+}
 
+
+/*responsividade*/
 
 @media (min-width: 768px) {
   .navbar .btn-mobile {
