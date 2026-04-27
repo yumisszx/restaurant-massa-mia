@@ -62,4 +62,4 @@ Você só precisa de um navegador moderno e do Git instalado.
     ```
 
 3. **Abra o arquivo principal:** <br>
-Depois de iniciado visualize no browser
+Depois de iniciado visualize no browser o projeto.
