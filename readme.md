@@ -34,9 +34,9 @@ As seguintes tecnologias foram utilizadas na construção do projeto até então
 
 | Tecnologia | Descrição |
 | :--- | :--- |
-| **HTML5** | Estruturação semântica do conteúdo. |
+| **Java** | Desenvolvimento da aplicação. |
 | **CSS3** | Estilização responsiva. |
-| **JavaScript** | Interatividade da navbar. |
+| **TypeScript** | Desenvolvimento web. |
 | **Gemini** | Gerador de imagens. |
 | **MySQL** | Armazenamento de dados. |
 
@@ -55,7 +55,11 @@ Você só precisa de um navegador moderno e do Git instalado.
 2. **Acesse a pasta:**
     ```bash
     cd restaurant-massa-mia
+
+    npm install
+
+    npm run dev
     ```
 
 3. **Abra o arquivo principal:** <br>
-Basta abrir o arquivo index.html em seu navegador ou utilizar a extensão Live Server do VS Code.
+Depois de iniciado visualize no browser
