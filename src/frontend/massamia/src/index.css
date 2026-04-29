@@ -265,13 +265,17 @@ h1 {
 
 .btn-add-produto {
   font-size: clamp(1rem, 1.1vw, 1.2rem);
-  margin-top: 1rem;
-  background-color: var(--green-principal);
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  background-color: var(--red-dark);
   color: var(--color-txt-light-3);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 
   &:hover{
-    background-color: var(--green-dark);
+    background-color: var(--red-principal);
   }
 }
 
