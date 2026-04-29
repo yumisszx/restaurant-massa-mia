@@ -176,7 +176,7 @@ h1 {
 }
 
 #produtosMenu {
-  padding: 2px;
+  width: 100%;
   display: flex;
   text-align: center;
   align-items: center;
@@ -193,31 +193,34 @@ h1 {
 }
 
 .card {
-  background-color: var(--color-neutral-1);
-  width: clamp(15rem, 28vw, 22rem);
+  background-color: var(--color-txt-light-2);
+  width: clamp(19rem, 28vw, 22rem);
   display: flex;
   gap: 10px;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  justify-content: center;
   border-radius: 0.5rem;
-  padding: 1.5rem;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.058);
   margin-top: 2rem;
   color: var(--color-txt-dark-1);
 }
 
 .card .card-img {
-  width: clamp(10rem, 14vw, 15rem);
-  border-radius: 0.5rem;
+  width: clamp(19rem, 28vw, 22rem);
+  border-radius: 0.5rem 0.5rem 0 0;
   box-shadow: 0 0 2px rgba(232, 189, 80, 0.479);
 }
 
 .card .card-title {
   font-family: "Crimson Pro";
   text-transform: capitalize;
-  margin: 1rem 0;
+  display: block;
+  padding: 5px;
+}
+
+.card .card-description{
+  padding: 10px;
 }
 
 .card .card-description::first-letter {
@@ -233,23 +236,24 @@ h1 {
 .btns-card {
   display: flex;
   flex-direction: row;
-  gap: 3rem;
-  margin-top: 1rem;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .btn-card {
   font-size: 16px;
   font-weight: 500;
   padding: 1rem;
+  margin: 0 1rem 1rem 1rem;
 }
 
 .btn-delete {
-  background-color: var(--red-principal);
+  background-color: var(--color-neutral-5);
   color: var(--color-neutral-0);
   cursor: pointer;
 
   &:hover {
-    background-color: #b22003;
+    background-color: var(--color-neutral-4);
   }
 }
 
@@ -317,7 +321,6 @@ h1 {
 }
 
 .input-container {
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -325,16 +328,17 @@ h1 {
 }
 
 input {
-  background-color: var(--color-neutral-1);
+  background-color: var(--color-txt-light-1);
   width: 20rem;
   height: 30px;
   margin-top: 5px;
   border-radius: 8px;
-  border: 2px solid var(--color-neutral-2);
+  border: 2px solid var(--color-neutral-1);
+  padding-left: 5px;
 }
 
 label {
-  margin-top: 0.7rem;
+  margin-top: 0.5rem;
   color: var(--color-neutral-5);
   font-weight: 500;
 }
@@ -346,33 +350,50 @@ label {
   color: var(--color-txt-light-1);
   font-weight: 500;
   padding: 0.9rem 2rem;
+
+  &:hover{
+    background-color: var(--color-neutral-4);
+  }
 }
 
 select {
-  background-color: var(--color-neutral-3);
-  color: var(--color-txt-dark-1);
+  background-color: var(--color-neutral-6);
+  color: var(--color-txt-light-1);
   width: 14rem;
   text-align: center;
   padding: 0.5rem;
-  margin-top: 0.7rem;
+  margin-top: 0.9rem;
   border-radius: 8px;
   font-weight: 500;
   font-size: 15px;
   cursor: pointer;
+
+  &:hover{
+    background-color: var(--color-neutral-5);
+  }
 }
 
 option {
-  background-color: var(--color-neutral-1);
-  color: var(--color-neutral-3);
+  background-color: var(--color-txt-light-1);
+  color: var(--color-txt-dark-1);
+
+  &:checked {
+  background-color: var(--color-neutral-5);
+  color: var(--color-txt-light-1);
+  }
 }
 
 .btn-save {
   margin-top: 1rem;
-  background-color: var(--green-principal);
+  background-color: var(--green-dark);
   font-size: 15px;
-  color: var(--color-neutral-0);
+  color: var(--color-txt-light-3);
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.17);
   padding: 0.7rem 1.5rem;
+
+  &:hover{
+    background-color: var(--green-principal);
+  }
 }
 
 footer p {
@@ -517,11 +538,17 @@ h2 {
     padding: 0;
   }
 
+
   .card-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
+    padding: 0 2rem 0 2rem;
+  }
+
+  .btns-card{
+    margin-top: auto;
   }
 
   .modal-body {
