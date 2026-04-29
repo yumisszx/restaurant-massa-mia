@@ -166,12 +166,12 @@ h1 {
 
 .menu-btn {
     font-size: clamp(1rem, 1.1vw, 1.2rem);
-    background-color: var(--red-principal);
+    background-color: var(--green-dark);
     color: var(--color-txt-light-4);
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 
     &:hover {
-      background-color: var(--red-dark);
+      background-color: var(--green-principal);
     }
 }
 

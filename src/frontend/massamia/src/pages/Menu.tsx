@@ -51,8 +51,6 @@ function Menu() {
     <div className='container-menu'>
       <Header />
 
-      <h1>Menu</h1>
-
       <button className='btn btn-add-produto' onClick={openModalCreate}>
         Adicionar produto
       </button>
