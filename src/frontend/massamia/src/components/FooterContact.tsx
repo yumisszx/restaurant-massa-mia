@@ -4,11 +4,11 @@ const Footer: React.FC = () => {
 
 
   return (
-    <footer>
-        <div id="txt-footer">
+    <footer id="footer-contact">
+        <div className="txt-footer">
             <p>Entre em contato <br />com nosso suporte</p>
         </div>
-        <div id="footer-contact">
+        <div className="contact-footer">
             <section id="endereco">
                 <span>Endereço:</span>
                 <p>Rua Qualquer, 123, Cidade Qualquer, Estado, País</p>
