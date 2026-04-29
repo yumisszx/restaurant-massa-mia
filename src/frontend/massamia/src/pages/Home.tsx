@@ -5,6 +5,7 @@ import imgRecepcao from './../assets/recepcaoMassaMia.png'
 
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
+import FooterContact from "../components/FooterContact";
 
 const Home: React.FC = () => {
     const [textoDivisoria, setTextoDivisoria] = useState(0);
@@ -78,6 +79,8 @@ const Home: React.FC = () => {
 
                 </div>
                 */}
+
+                <FooterContact />
             </div>
         </main>
     );
