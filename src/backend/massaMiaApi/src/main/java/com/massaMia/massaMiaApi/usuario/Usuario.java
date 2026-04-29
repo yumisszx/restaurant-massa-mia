@@ -15,7 +15,7 @@ import lombok.*;
 
 public class Usuario {
 
-    @id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome_usuario;
     private String email;
