@@ -25,6 +25,8 @@ const Header: React.FC = () => {
             <Link to="/#sobre-nos" >Sobre Nós</Link>
           </li>
         </ul>
+
+        <button className="btn btn-user"><i className="fa-solid fa-user"></i></button>
       </nav>
     </header>
   );
