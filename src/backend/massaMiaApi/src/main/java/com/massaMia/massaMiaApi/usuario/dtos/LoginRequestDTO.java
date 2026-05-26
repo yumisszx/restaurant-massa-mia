@@ -1,4 +1,7 @@
 package com.MassaMia.MassaMiaApi.usuario.dtos;
 
-public record LoginRequestDTO() {
+public record LoginRequestDTO(
+        String email,
+        String senha
+) {
 }
