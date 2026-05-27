@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
                 <p>(12) 3456-7890</p>
             </section>
         </div>
-        <p>© {anoAtual} Massa Mia</p>
+        <p className="copy">© {anoAtual} Massa Mia</p>
     </footer>
   );
 };
