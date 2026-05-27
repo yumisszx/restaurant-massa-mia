@@ -21,7 +21,7 @@ const Header: React.FC = () => {
               <Link to="/menu" onClick={() => setMenuOpen(false)}>Produtos</Link>
             </li>
             <li>
-              <Link to="/#sobre-nos" >Sobre Nós</Link>
+              <a href="/#sobre-nos" >Sobre Nós</a>
             </li>
           </ul>
           <button className="btn btn-user"><i className="fa-solid fa-user"></i></button>
