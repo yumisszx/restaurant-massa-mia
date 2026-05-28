@@ -25,7 +25,6 @@ const Home: React.FC = () => {
         return () => clearInterval(interval);
     }, []);
 
-
     return (
         <main>
             <div className="container">

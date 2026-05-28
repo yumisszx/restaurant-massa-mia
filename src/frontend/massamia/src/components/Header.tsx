@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const [loginOpen, setLoginOpen] = useState(false);
+
+  const closeLogin = () => setLoginOpen(false);
+
   return (
     <header>
       <nav className="navbar">
@@ -24,7 +28,10 @@ const Header: React.FC = () => {
               <a href="/#sobre-nos" >Sobre Nós</a>
             </li>
           </ul>
-          <button className="btn btn-user"><i className="fa-solid fa-user"></i></button>
+          <button
+            className="btn btn-user"
+            onClick={() => setLoginOpen(!loginOpen)}>
+            <i className="fa-solid fa-user"></i></button>
         </div>
       </nav>
     </header>
